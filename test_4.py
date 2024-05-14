@@ -10,7 +10,7 @@ class GeometricObject:
             self.__x = float(x)
             self.__y = float(y)
         else:
-            raise ValueError
+            print('ошибка')
         self.color = color
         self.filled = filled
 
@@ -71,7 +71,7 @@ class Circle(GeometricObject):
             else:
                 self.__radius = 0.0
         else:
-            raise ValueError
+            print('ошибка')
 
     @property
     def radius(self):
@@ -122,7 +122,7 @@ class Rectangle(GeometricObject):
             else:
                 self.width = 0.0
         else:
-            raise ValueError
+            print('ошибка')
 
         if isinstance(height, float):
             if height >= 0:
@@ -135,7 +135,7 @@ class Rectangle(GeometricObject):
             else:
                 self.height = 0.0
         else:
-            raise ValueError
+            print('ошибка')
 
     def set_width(self, value: float):
         if isinstance(value, float) and value >= 0:
